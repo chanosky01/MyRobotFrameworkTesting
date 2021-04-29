@@ -1,0 +1,8 @@
+*** Variables ***
+#Locator Variables
+
+#Hazard Page Headers (Add more if needed)
+${}    
+${HazardLabelHeader}    //h1[contains(text(), 'Hazard')]
+${HazardLabelHeader2}    //h3[contains(text(), 'A situation that poses a level of threat to life, health, property, or environment')]
+${IncidentDetailsTab}    //a[contains(@href,'#incidentDetails') and contains(text(), 'Incident Details')]

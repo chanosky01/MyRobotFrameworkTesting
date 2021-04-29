@@ -1,0 +1,15 @@
+*** Settings ***
+Resource    StartPageKeywords.resource
+Resource    StartPageLocators.resource
+Resource    ../Keywords.resource
+Resource    ../LoginAndDashboardPage/LoginAndDashboardPageLocators.resource
+Resource    StartPageVariables.resource
+
+
+
+*** Test Cases ***
+
+Create Account
+    User Navigates to Create Account    
+    User Inspects Create Account Page
+    Fill In First Name

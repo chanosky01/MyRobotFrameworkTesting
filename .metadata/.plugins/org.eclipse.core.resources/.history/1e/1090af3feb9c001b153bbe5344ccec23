@@ -1,0 +1,57 @@
+*** Variables ***
+#Locator Variables
+
+#Hazard Page Headers (Add more if needed)
+${HazardBreadcrumb}    //span[contains(@class, 'breadCrumbTitle') and text()= 'Hazard']
+${HazardLabelHeader}    //h1[contains(text(), 'Hazard')]
+${HazardLabelHeader2}    //h3[contains(text(), 'A situation that poses a level of threat to life, health, property, or environment')]
+${IncidentDetailsTab}    //a[contains(@href,'#incidentDetails') and contains(text(), 'Incident Details')]
+
+
+#Business Unit Selector (Add more if needed)
+${BusinessUnitLabel}    //label[contains(text(), 'Business Unit')]
+${BusinessUnitSelector}    //*[@id="BUSelect"]
+
+
+#Location (Add more if needed)
+${LocationLabel}    //label[contains(text(), 'Location')]
+${LocationSelectButton}    //*[@id="BUSelectLocation"]
+${LocationDropdown}    //*[@id="LocationID"]
+
+
+#Hazard Date (Add more if needed)    
+${HazardDateLabel}    //label[contains(text(), 'Hazard Date')]
+${HazardDateSelector}    //*[@id="ReportedDate"]
+
+
+#Describe hazard (Add more if needed)
+${DescribeWhereHazardLabel}    //label[contains(text(), 'Describe where the hazard is')]
+${DescribeWhereHazardTextBox}    //*[@id="LocationDescription"]
+
+
+#Describe hazard (Add more if needed)
+${DescribeHazardLabel}    //label[contains(text(), 'Describe the hazard')]
+${DescribeHazardTextBox}    //*[@id="Description"]
+
+
+#Suggest solutions (Add more if needed)
+${SuggestSolutionLabel}    //label[contains(text(), 'Suggest solutions')]
+${SuggestSolutionTextBox}    //*[@id="Suggest"]
+
+
+#Who reported the hazard (Add more if needed)
+${WhoReportedHazardLabel}    //label[contains(text(), 'Who reported the hazard?')]
+${WhoReportedHazardTextBox}    //*[@id="ReportedBy"]
+
+
+#Line Manager's Name (Add more if needed)
+${LineManagerNameLabel}    //label[contains(text(), 'Line Manager's Name')]
+${LineManagerNameTextBox}    //*[@id="ManagerName"]
+
+
+#Line Manager's Email (Add more if needed)
+${LineManagerEmailLabel}    //label[contains(text(), 'Line Manager's Email')]
+${LineManagerEmailTextBox}    //*[@id="ManagerEmail"]
+
+#Save and Next button
+${SaveAndNextButton}    //*[@id="initialandExit"]    

@@ -1,0 +1,11 @@
+*** Settings ***
+Library    SeleniumLibrary        
+
+
+*** Test Cases ***
+Test1
+    Log    Chano
+    
+Test2
+    Open Browser    https://staging-safety365.sevron.co.uk/      gecko
+    Close Browser

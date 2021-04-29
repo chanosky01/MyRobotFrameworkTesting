@@ -1,0 +1,23 @@
+*** Settings ***
+Library    SeleniumLibrary
+Resource    variables.resource
+Resource    keywords.resource
+Resource    Handlers.resource                
+
+*** Keywords ***
+User Successfully Login
+    Open Browser    ${URL}      ${chromeBrowser}
+    Wait Until Element Is Visible    name=email    
+    Input Text    name=email    ${email}
+    Wait Until Element Is Visible    name=password        
+    Input Text    name=password    ${password}
+    Click Button    //*[@class='btn green']
+    ${present}=    Run Keyword And Return Status    Element Should Be Visible   //*[@id="modalDeviceNotification"]/div/div/div[1]/button
+    Run Keyword If  ${present}    Handle New User Modals
+    Else    Log    User Successfully Logged In                     
+
+    
+User Navigates to Incidents Page
+    Go To    https://staging-safety365.sevron.co.uk/incidents/hazard
+    Element
+  

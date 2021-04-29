@@ -1,0 +1,15 @@
+*** Settings ***
+Library    SeleniumLibrary        
+
+
+*** Test Cases ***
+Test1
+    Log    Chano
+    
+Test2
+    Open Browser    https://staging-safety365.sevron.co.uk/      firefox
+    Wait Until Element Is Visible    /html/body/div[1]/div/div[2]/div[1]/form[1]/div[2]/div[1]/input    
+    Input Text    /html/body/div[1]/div/div[2]/div[1]/form[1]/div[2]/div[1]/input    email@sample.com
+    Wait Until Element Is Visible    /html/body/div[1]/div/div[2]/div[1]/form[1]/div[2]/div[2]/input        
+    Input Text    /html/body/div[1]/div/div[2]/div[1]/form[1]/div[2]/div[2]/input    password    
+    Close Browser

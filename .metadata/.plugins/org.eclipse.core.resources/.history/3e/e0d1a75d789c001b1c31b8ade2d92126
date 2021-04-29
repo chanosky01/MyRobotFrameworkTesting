@@ -1,0 +1,16 @@
+*** Settings ***
+Library    SeleniumLibrary
+Resource    variables.resource
+Resource    keywords.resource               
+
+
+*** Test Cases ***
+    
+Navigate to Incidents Page
+    Given User Successfully Login
+    Mouse Over    //*[@id='usernameDisplay']
+    Wait Until Element Is Visible    //*[@class='btnLogout']  
+    Click Element    //*[@class='btnLogout']     
+
+*** Keywords ***
+ 

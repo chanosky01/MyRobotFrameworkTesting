@@ -1,0 +1,4 @@
+*** Settings ***
+Library    SeleniumLibrary    
+Resource    StartPageLocators.resource
+Resource    StartPageVariables.resource

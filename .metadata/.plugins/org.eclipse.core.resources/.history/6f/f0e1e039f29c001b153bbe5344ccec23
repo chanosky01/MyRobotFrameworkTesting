@@ -1,0 +1,17 @@
+*** Variables ***
+#Locator Variables
+
+#Login Page (Add more if needed)
+${EmailTextBox}    name=email    
+${PasswordTextBox}    name=password
+${LoginButton}    //*[@class='btn green']
+${ModalDeviceNotification}    //*[@id="modalDeviceNotification"]/div/div/div[1]/button
+${CloseModalButton}    //*[@class='btn btn-lg btn-info']
+${TutorializeModal}    //*[@id="tutorialize-elements"]/div[6]/ul/li[2]
+
+
+
+
+#Dashboard Page
+${UsernameDisplay}    //*[@id="usernameDisplay"]
+${LogoutButton}    //*[@class='btnLogout']

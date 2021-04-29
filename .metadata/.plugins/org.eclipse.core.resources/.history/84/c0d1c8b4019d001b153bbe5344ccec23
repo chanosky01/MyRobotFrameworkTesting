@@ -1,0 +1,19 @@
+*** Settings ***
+Resource    IncidentPageKeywords.resource
+Resource    IncidentPageLocators.resource
+Resource    ../Keywords.resource
+Resource    ../LoginAndDashboardPage/LoginAndDashboardPageLocators.resource
+Resource    IncidentPageVariables.resource
+
+
+*** Test Cases ***
+    
+Navigate to Incidents Page
+    User Successfully Login
+    User Navigates to Incidents Page
+    Fill In Text for Describe where the hazard is TextBox
+    User Successfully Logout
+
+    
+
+        

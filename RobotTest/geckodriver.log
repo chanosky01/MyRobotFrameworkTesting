@@ -1,0 +1,35 @@
+1618303680153	geckodriver	INFO	Listening on 127.0.0.1:62418
+1618303795304	geckodriver	INFO	Listening on 127.0.0.1:62505
+1618303798360	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Cheyenne\\AppData\\Local\\Temp\\rust_mozprofilevXPTFJ"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1618303800295	Marionette	INFO	Listening on port 62513
+1618303800379	Marionette	WARN	TLS certificate errors will be ignored for this session
+1618303805675	Marionette	INFO	Stopped listening on port 62513
+1618305318098	geckodriver	INFO	Listening on 127.0.0.1:63086
+1618305321155	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Cheyenne\\AppData\\Local\\Temp\\rust_mozprofilesNDVQA"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1618305323087	Marionette	INFO	Listening on port 63095
+1618305323171	Marionette	WARN	TLS certificate errors will be ignored for this session
+1618305352430	Marionette	INFO	Stopped listening on port 63095
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1618305430312	geckodriver	INFO	Listening on 127.0.0.1:63201
+1618305433354	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Cheyenne\\AppData\\Local\\Temp\\rust_mozprofileSLsLNG"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1618305435204	Marionette	INFO	Listening on port 63210
+1618305435368	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: services.settings: 
+  main/partitioning-exempt-urls Signature failed  TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://staging-safety365.sevron.co.uk"
+1618305470234	Marionette	INFO	Stopped listening on port 63210
+1618305521003	geckodriver	INFO	Listening on 127.0.0.1:63312
+1618305524052	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Cheyenne\\AppData\\Local\\Temp\\rust_mozprofilemFi2cD"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1618305525951	Marionette	INFO	Listening on port 63321
+1618305526067	Marionette	WARN	TLS certificate errors will be ignored for this session
+1618305531394	Marionette	INFO	Stopped listening on port 63321
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1030: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\Cheyenne\AppData\Local\Temp\rust_mozprofilemFi2cD\protections.sqlite
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

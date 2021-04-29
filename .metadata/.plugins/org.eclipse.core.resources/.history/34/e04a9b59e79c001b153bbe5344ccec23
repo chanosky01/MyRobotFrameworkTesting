@@ -1,0 +1,15 @@
+*** Settings ***
+Library    SeleniumLibrary
+Resource    ../Variables.resource
+Resource    ../Keywords.resource               
+
+
+*** Test Cases ***
+    
+Navigate to Incidents Page
+    Given User Successfully Login
+    When User Navigates to Incidents Page
+    
+
+
+ 

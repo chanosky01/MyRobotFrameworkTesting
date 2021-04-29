@@ -1,0 +1,24 @@
+*** Settings ***
+Library    SeleniumLibrary
+Resource    Variables.resource
+Resource    Keywords.resource
+Resource    LoginAndDashboardPage/LoginAndDashboardPageLocators.resource
+Resource    Handlers.resource                
+
+*** Keywords ***
+User Successfully Login
+    Open Browser    ${URL}      ${chromeBrowser}
+    Maximize Browser Window
+    Wait Until Element Is Visible    ${EmailTextBox}    
+    Input Text    ${EmailTextBox}    ${email}
+    Wait Until Element Is Visible    ${PasswordTextBox}        
+    Input Text    ${PasswordTextBox}    ${password}
+    Click Button    ${LoginButton}
+    ${present}=    Run Keyword And Return Status    Element Should Be Visible   ${ModalDeviceNotification}
+    Run Keyword If  ${present}    Handle New User Modals    ELSE    Log    User Successfully Logged In                     
+
+
+User Successfully Logout
+    Mouse Over    ${UsernameDisplay}
+    Click Element    ${LogoutButton} 
+          

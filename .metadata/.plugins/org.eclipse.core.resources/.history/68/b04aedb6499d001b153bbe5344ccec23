@@ -1,0 +1,65 @@
+*** Settings ***
+Library    SeleniumLibrary    
+Resource    StartPageLocators.resource
+Resource    StartPageVariables.resource
+Resource    ../Keywords.resource
+
+
+*** Keywords ***
+User Inspects Create Account Page
+    Page Should Contain Link    ${LoginHereLink}    
+    Page Should Contain Element    ${CreateAccountLabel}
+    Page Should Contain Element    ${FirstNameLabel}    
+    Page Should Contain Element    ${FirstNamePlaceholder}
+    ${firstnameplaceholder}    Get Element Attribute    ${FirstNamePlaceholder}    placeholder         
+    Should Be Equal    ${firstnameplaceholder}    ${fnplaceholdertext}
+    Page Should Contain Element    ${LastNameLabel}    
+    Page Should Contain Element    ${LastNamePlaceholder}
+    ${lastnameplaceholder}    Get Element Attribute    ${LastNamePlaceholder}    placeholder         
+    Should Be Equal    ${lastnameplaceholder}    ${lnplaceholdertext}       
+    Page Should Contain Element    ${CompanyNameLabel}    
+    Page Should Contain Element    ${CompanyPlaceholder}
+    ${companyplaceholder}    Get Element Attribute    ${CompanyPlaceholder}    placeholder         
+    Should Be Equal    ${companyplaceholder}    ${companyplaceholdertext}        
+    Page Should Contain Element    ${TelephoneLabel}     
+    Page Should Contain Element    ${TelephonePlaceholder}
+    ${phoneplaceholder}    Get Element Attribute    ${TelephonePlaceholder}    placeholder         
+    Should Be Equal    ${phoneplaceholder}    ${phoneplaceholdertext}
+    Page Should Contain Element    ${WorkEmailLabel}     
+    Page Should Contain Element    ${WorkEmailPlaceholder}
+    ${emailplaceholder}    Get Element Attribute    ${WorkEmailPlaceholder}    placeholder         
+    Should Be Equal    ${emailplaceholder}    ${workemailplaceholdertext}
+    Page Should Contain Element    ${CreatePasswordLabel}     
+    Page Should Contain Element    ${CreatePasswordPlaceholder}
+    ${pwplaceholder}    Get Element Attribute    ${CreatePasswordPlaceholder}   placeholder         
+    Should Be Equal    ${pwplaceholder}    ${passwordplaceholdertext}
+    Page Should Contain Link    ${TermsAndConditionsLink} 
+    Page Should Contain Button    ${CreateAccountButton}
+    Select Frame    ${CaptchaFrame}       
+    Page Should Contain Element    ${CaptchaContainer}
+    Unselect Frame
+    
+Fill In Correct Account Details
+    Input Text    ${FirstNamePlaceholder}    ${fname}[0]
+    Input Text    ${LastNamePlaceholder}     ${lname}[0]
+    Input Text    ${CompanyPlaceholder}    ${company}[0]
+    Input Text    ${TelephonePlaceholder}     ${phone}[0]
+    Input Text    ${WorkEmailPlaceholder}     ${workemail}[0]
+    Input Text    ${CreatePasswordPlaceholder}     ${newpassword}
+    
+Fill In Invalid Account Details
+    Click Button    ${CreateAccountButton}
+    Page Should Contain Element    ${FirstNameErrorLabel}    
+    Page Should Contain Element    ${LastNameErrorLabel}
+    Page Should Contain Element    ${CompanyErrorLabel}             
+    Page Should Contain Element    ${TelephonePlaceholder}      
+    Page Should Contain Element    ${CreatePasswordErrorLabel}
+    Input Text    ${FirstNamePlaceholder}    a        
+    Input Text    ${LastNamePlaceholder}     b
+    Input Text    ${CompanyPlaceholder}    c
+    Input Text    ${WorkEmailPlaceholder}    a
+    Input Text    ${CreatePasswordPlaceholder}    a           
+    Page Should Contain Element    ${FirstNameErrorLabelFor3Char}
+    Page Should Contain Element    ${LastNameErrorLabelFor3Char}
+    Page Should Contain Element    ${CompanyErrorLabelFor3Char}
+    Page Should Contain Element    ${CreatePasswordErrorLabel}                                     

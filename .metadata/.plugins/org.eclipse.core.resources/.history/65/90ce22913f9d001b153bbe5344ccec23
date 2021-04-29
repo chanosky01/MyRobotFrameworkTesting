@@ -1,0 +1,10 @@
+*** Variables ***
+
+#Create Account Variable
+${fnplaceholdertext}    Your first name
+${lnplaceholdertext}    Your last name
+${companyplaceholdertext}    Your company name
+${phoneplaceholdertext}    Your telephone
+${workemailplaceholdertext}    you@yourcompany.co.uk
+${passwordplaceholdertext}    Password    
+

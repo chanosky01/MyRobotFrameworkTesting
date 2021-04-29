@@ -1,0 +1,16 @@
+*** Settings ***
+Library    SeleniumLibrary    
+Resource    StartPageLocators.resource
+Resource    StartPageVariables.resource
+
+
+*** Keywords ***
+User Create Account
+    Go To    ${CreateAccountURL}
+    Page Should Contain Link    ${LoginHereLink}    
+    Page Should Contain Element    ${CreateAccountLabel}
+    Page Should Contain Element    ${FirstNameLabel}    
+    Page Should Contain Element    ${FirstNamePlaceholder}
+    
+        
+    

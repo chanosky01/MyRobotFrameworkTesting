@@ -1,0 +1,14 @@
+*** Settings ***
+Library    SeleniumLibrary
+
+*** Keywords ***
+
+Handle New User Modals
+    Wait Until Element Is Visible    //*[@id="modalDeviceNotification"]/div/div/div[1]/button
+    Click Button    //*[@id="modalDeviceNotification"]/div/div/div[1]/button
+    Wait Until Element Is Visible    //*[@class='btn btn-lg btn-info']   
+    Click Button    //*[@class='btn btn-lg btn-info']   
+    Wait Until Element Is Visible    //*[@id="tutorialize-elements"]/div[6]/ul/li[2]
+    Click Element    //*[@id="tutorialize-elements"]/div[6]/ul/li[2]
+    Wait Until Element Is Visible    //*[@id="modalDeviceNotification"]/div/div/div[1]/button
+    Click Button    //*[@id="modalDeviceNotification"]/div/div/div[1]/button

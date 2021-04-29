@@ -1,0 +1,34 @@
+*** Settings ***
+Library    SeleniumLibrary    
+Resource    StartPageLocators.resource
+Resource    StartPageVariables.resource
+Resource    ../Keywords.resource
+
+*** Keywords ***
+User Inspects Create Account Page
+    Page Should Contain Link    ${LoginHereLink}    
+    Page Should Contain Element    ${CreateAccountLabel}
+    Page Should Contain Element    ${FirstNameLabel}    
+    Page Should Contain Element    ${FirstNamePlaceholder}
+    ${firstnameplaceholder}    Get Element Attribute    ${FirstNamePlaceholder}    placeholder         
+    Should Be Equal    ${firstnameplaceholder}    ${fnplaceholdertext}
+    Page Should Contain Element    ${LastNameLabel}    
+    Page Should Contain Element    ${LastNamePlaceholder}
+    ${lastnameplaceholder}    Get Element Attribute    ${LastNamePlaceholder}    placeholder         
+    Should Be Equal    ${lastnameplaceholder}    ${lnplaceholdertext}       
+    Page Should Contain Element    ${CompanyNameLabel}    
+    Page Should Contain Element    ${CompanyPlaceholder}
+    ${companyplaceholder}    Get Element Attribute    ${CompanyPlaceholder}    placeholder         
+    Should Be Equal    ${companyplaceholder}    ${companyplaceholdertext}        
+    Page Should Contain Element    ${TelephoneLabel}     
+    Page Should Contain Element    ${TelephonePlaceholder}
+    ${phoneplaceholder}    Get Element Attribute    ${TelephonePlaceholder}    placeholder         
+    Should Be Equal    ${phoneplaceholder}    ${phoneplaceholdertext}
+    Page Should Contain Element    ${WorkEmailLabel}     
+    Page Should Contain Element    ${WorkEmailPlaceholder}
+    ${emailplaceholder}    Get Element Attribute    ${WorkEmailPlaceholder}    placeholder         
+    Should Be Equal    ${emailplaceholder}    ${workemailplaceholdertext}
+    Page Should Contain Element    ${CreatePasswordLabel}     
+    Page Should Contain Element    ${CreatePasswordPlaceholder}
+    ${pwplaceholder}    Get Element Attribute    ${CreatePasswordPlaceholder}   placeholder         
+    Should Be Equal    ${pwplaceholder}    ${passwordplaceholdertext}            

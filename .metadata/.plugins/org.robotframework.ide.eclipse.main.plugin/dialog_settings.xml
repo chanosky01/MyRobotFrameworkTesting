@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.robotframework.ide.tableditor.activePage./RobotTest/SevronTechTest/SevronTechTestSuite.robot">
+		<item key="activePage" value=""/>
+	</section>
+	<section name="org.robotframework.ide.project.editor.activePage.RobotTest">
+		<item key="activePage" value="LibrariesProjectConfigurationEditorPart"/>
+	</section>
+	<section name="org.robotframework.ide.tableditor.activePage./RobotTest/SevronTechTest/keywords.resource">
+		<item key="activePage" value=""/>
+	</section>
+	<section name="org.robotframework.ide.tableditor.activePage./RobotTest/SevronTechTest/variables.resource">
+		<item key="activePage" value=""/>
+	</section>
+	<section name="org.robotframework.ide.tableditor.activePage./RobotTest/SevronTechTest/Handlers.resource">
+		<item key="activePage" value=""/>
+	</section>
+	<section name="org.robotframework.ide.tableditor.activePage./RobotTest/SevronTechTest/IncidentHazardPage/IncidentPageKeywords.resource">
+		<item key="activePage" value=""/>
+	</section>
+	<section name="org.robotframework.ide.tableditor.activePage./RobotTest/Keywords.resource">
+		<item key="activePage" value=""/>
+	</section>
+	<section name="org.robotframework.ide.tableditor.activePage./RobotTest/SevronTechTest/Keywords.resource">
+		<item key="activePage" value=""/>
+	</section>
+	<section name="org.robotframework.ide.tableditor.activePage./RobotTest/SevronTechTest/IncidentHazardPage/IncidentPageLocators.resource">
+		<item key="activePage" value=""/>
+	</section>
+	<section name="org.robotframework.ide.tableditor.activePage./RobotTest/SevronTechTest/IncidentHazardPage/IncidentPageTests.robot">
+		<item key="activePage" value=""/>
+	</section>
+	<section name="org.robotframework.ide.tableditor.activePage./RobotTest/SevronTechTest/LoginPage/LoginPageLocators.resource">
+		<item key="activePage" value=""/>
+	</section>
+	<section name="org.robotframework.ide.tableditor.activePage./RobotTest/SevronTechTest/LoginAndDashboardPage/LoginAndDashboardPageLocators.resource">
+		<item key="activePage" value=""/>
+	</section>
+	<section name="org.robotframework.ide.tableditor.activePage./RobotTest/SevronTechTest/IncidentHazardPage/IncidentPageVariables.resource">
+		<item key="activePage" value=""/>
+	</section>
+	<section name="org.robotframework.ide.tableditor.activePage./RobotTest/SevronTechTest/StartPage/IncidentPageKeywords.resource">
+		<item key="activePage" value=""/>
+	</section>
+	<section name="org.robotframework.ide.tableditor.activePage./RobotTest/SevronTechTest/StartPage/StartPageKeywords.resource">
+		<item key="activePage" value=""/>
+	</section>
+	<section name="org.robotframework.ide.tableditor.activePage./RobotTest/SevronTechTest/StartPage/StartPageLocators.resource">
+		<item key="activePage" value=""/>
+	</section>
+	<section name="org.robotframework.ide.tableditor.activePage./RobotTest/SevronTechTest/StartPage/StartPageVariables.resource">
+		<item key="activePage" value=""/>
+	</section>
+	<section name="org.robotframework.ide.tableditor.activePage./RobotTest/SevronTechTest/StartPage/StartPageTests.robot">
+		<item key="activePage" value=""/>
+	</section>
+	<section name="org.robotframework.ide.tableditor.activePage./RobotTest/SevronTechTest/Variables.resource">
+		<item key="activePage" value=""/>
+	</section>
+</section>

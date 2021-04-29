@@ -1,0 +1,13 @@
+*** Settings ***
+Resource    IncidentPageKeywords.resource
+Resource    IncidentPageLocators.resource
+Resource    ../Keywords.resource
+Resource    ../LoginAndDashboardPage/LoginAndDashboardPageLocators.resource
+
+
+*** Test Cases ***
+    
+Navigate to Incidents Page
+    Given User Successfully Login
+    When User Navigates to Incidents Page
+    Then User Succesfully Logout

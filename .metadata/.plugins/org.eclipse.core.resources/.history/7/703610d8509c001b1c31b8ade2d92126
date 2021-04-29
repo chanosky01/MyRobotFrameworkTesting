@@ -1,0 +1,21 @@
+*** Settings ***
+Library    SeleniumLibrary               
+
+
+*** Test Cases ***
+Test1
+    Log    Chano
+    
+Test2
+    Open Browser    https://staging-safety365.sevron.co.uk/      chrome
+    Wait Until Element Is Visible    name=email    
+    Input Text    name=email    email@sample.com
+    Wait Until Element Is Visible    name=password        
+    Input Text    name=password    password
+    Click Link    //a[@href='https://www.sevron.co.uk/terms-conditions/']
+    Get Window Handles    chano       
+    Switch Window  chano  
+    Log Location 
+    Location Should Be    https://www.sevron.co.uk/terms-conditions/        
+    Close Browser
+    

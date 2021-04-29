@@ -1,0 +1,26 @@
+*** Settings ***
+Library    SeleniumLibrary               
+
+
+*** Test Cases ***
+    
+Login
+    Open Browser    https://staging-safety365.sevron.co.uk/      chrome
+    Wait Until Element Is Visible    name=email    
+    Input Text    name=email    lee.christian01@gmail.com
+    Wait Until Element Is Visible    name=password        
+    Input Text    name=password    Password123
+    Click Button    //*[@class='btn green']           
+    Wait Until Element Is Visible    //*[@id="usernameDisplay"]  
+    Select Frame    //*[@id='newAccountWelcomeModal']
+    Click Button    //*[@class='btn btn-lg btn-info']
+    Unselect Frame
+    Select Frame    //*[@id='tutorialize-elements']    
+    Wait Until Element Is Visible    //*[@class='tutorialize-slide sevron']
+    Select Frame    //*[@id='tutorialize-elements']
+    Click Button    //*[@class='next']
+    Unselect Frame    
+    Click Button    //*[@class='btnLogout']     
+
+*** Keywords ***
+ 

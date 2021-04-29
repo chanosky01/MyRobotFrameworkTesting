@@ -1,0 +1,118 @@
+*** Settings ***
+Library    SeleniumLibrary    
+Resource    IncidentPageLocators.resource
+Resource    IncidentPageVariables.resource
+
+*** Keywords ***
+User Navigates to Incidents Page
+    Go To    https://staging-safety365.sevron.co.uk/incidents/hazard
+#Hazard Page Headers
+    Page Should Contain Element    ${HazardBreadcrumb}
+    Page Should Contain Element    ${HazardLabelHeader}
+    Page Should Contain Element    ${HazardLabelHeader2}
+    Page Should Contain Element    ${IncidentDetailsTab}
+#Business Unit Selector
+    Page Should Contain Element    ${BusinessUnitLabel}
+    Page Should Contain Element    ${BusinessUnitSelector} 
+#Location
+    Page Should Contain Element    ${LocationLabel}
+    Page Should Contain Button    ${LocationSelectButton}    
+    Page Should Contain Element    ${LocationDropdown}
+#Hazard Date
+    Page Should Contain Element    ${HazardDateLabel}      
+    Page Should Contain Element    ${HazardDateSelector}   
+#Describe where hazard is
+    Page Should Contain Element    ${DescribeWhereHazardLabel}
+    Page Should Contain Element    ${DescribeWhereHazardTextBox}
+#Describe the hazard    
+    Page Should Contain Element    ${DescribeHazardLabel}
+    Page Should Contain Element    ${DescribeHazardTextBox}    
+#Suggested Solutions 
+    Page Should Contain Element    ${SuggestedSolutionLabel}
+    Page Should Contain Element    ${SuggestedSolutionTextBox}    
+#Who reported the hazard? 
+    Page Should Contain Element    ${WhoReportedHazardLabel}
+    Page Should Contain Element    ${WhoReportedHazardTextBox}    
+#Line Manager's Name
+    Page Should Contain Element    ${LineManagerNameLabel}
+    Page Should Contain Element    ${LineManagerNameTextBox}   
+#Line Manager's Email
+    Page Should Contain Element    ${LineManagerEmailLabel}
+    Page Should Contain Element    ${LineManagerEmailTextBox}   
+#Save and Next Button
+    Page Should Contain Button    ${SaveAndNextButton}
+
+Fill In Text for Describe where the hazard is TextBox
+    Mouse Over    ${DescribeWhereHazardTextBox}
+    ${id}=    Get Element Attribute    ${DescribeWhereHazardTextBox}    aria-describedby
+    Page Should Contain Element    //*[@id="${id}"]/h3
+    ${title}=    Get Text    //*[@id="${id}"]/h3
+    Should Be Equal   ${title}    ${DescribeWhereTooltipMessage}                       
+    Input Text    ${DescribeWhereHazardTextBox}    ${text}
+    
+Fill In Text for Describe the hazard Textbox
+    Mouse Over    ${DescribeHazardTextBox}
+    ${id}=    Get Element Attribute    ${DescribeHazardTextBox}    aria-describedby
+    Page Should Contain Element    //*[@id="${id}"]/h3
+    ${title}=    Get Text    //*[@id="${id}"]/h3
+    Should Be Equal   ${title}    ${DescribeHazardTooltipMessage}                     
+    Input Text    ${DescribeHazardTextBox}    ${text}   
+
+Fill In Text for Suggested Solutions Textbox
+    Mouse Over    ${SuggestedSolutionTextBox}
+    ${id}=    Get Element Attribute    ${SuggestedSolutionTextBox}    aria-describedby
+    Page Should Contain Element    //*[@id="${id}"]/h3
+    ${title}=    Get Text    //*[@id="${id}"]/h3
+    Should Be Equal   ${title}    ${SuggestedSolutionTooltipMessage}                    
+    Input Text    ${SuggestedSolutionTextBox}    ${text}
+    
+Fill In Text for Who reported the hazard Textbox
+    Mouse Over    ${WhoReportedHazardTextBox}
+    ${id}=    Get Element Attribute    ${WhoReportedHazardTextBox}    aria-describedby
+    Page Should Contain Element    //*[@id="${id}"]/h3
+    ${title}=    Get Text    //*[@id="${id}"]/h3
+    Should Be Equal   ${title}    ${WhoReportedTooltipMessage}                         
+    Input Text    ${WhoReportedHazardTextBox}    ${text}
+    
+Fill In Text for Line Manager's Name Textbox
+    Execute JavaScript    window.scrollTo(0, 200)
+    Mouse Over    ${LineManagerNameTextBox}
+    ${id}=    Get Element Attribute    ${LineManagerNameTextBox}    aria-describedby
+    Page Should Contain Element    //*[@id="${id}"]/h3
+    ${title}=    Get Text    //*[@id="${id}"]/h3
+    Should Be Equal   ${title}    ${LineManagerNameTooltipMessage}                         
+    Input Text    ${LineManagerNameTextBox}    ${text}  
+         
+Fill In Text for Line Manager's Email Textbox
+    Execute JavaScript    window.scrollTo(0, 200)
+    Mouse Over    ${LineManagerEmailTextBox}
+    ${id}=    Get Element Attribute    ${LineManagerEmailTextBox}    aria-describedby
+    Page Should Contain Element    //*[@id="${id}"]/h3
+    ${title}=    Get Text    //*[@id="${id}"]/h3
+    Should Be Equal   ${title}    ${LineManagerEmailTooltipMessage}                         
+    Input Text    ${LineManagerEmailTextBox}    ${LineManagerEmail}
+
+Save and Next
+    Execute JavaScript    window.scrollTo(0, 200)
+    Click Button    ${SaveAndNextButton}
+    
+Check Warning Tooltips
+    Page Should Contain Element    ${HazardDateWarningTooltip}
+    ${fieldrequired}=    Get Element Attribute    ${HazardDateWarningTooltip}    data-original-title
+    Should Be Equal   ${fieldrequired}    ${TextWarningTooltipMessage}    
+    Page Should Contain Element    ${DescribeWhereHazardWarningTooltip}
+    ${fieldrequired}=    Get Element Attribute    ${DescribeWhereHazardWarningTooltip}    data-original-title
+    Page Should Contain Element    ${DescribeHazardWarningTooltip}
+    ${fieldrequired}=    Get Element Attribute    ${DescribeHazardWarningTooltip}    data-original-title    
+    Page Should Contain Element    ${SuggestedSolutionWarningTooltip}
+    ${fieldrequired}=    Get Element Attribute    ${SuggestedSolutionWarningTooltip}    data-original-title    
+    Page Should Contain Element    ${WhoReportedWarningTooltip}
+    ${fieldrequired}=    Get Element Attribute    ${WhoReportedWarningTooltip}    data-original-title    
+    Page Should Contain Element    ${LineManagerNameWarningTooltip}
+    ${fieldrequired}=    Get Element Attribute    ${LineManagerNameWarningTooltip}    data-original-title
+
+Invalid Email Address for Line Manager's Email Textbox
+    Page Should Contain Element    ${LineManagerNameWarningTooltip}
+    ${fieldrequired}=    Get Element Attribute    ${LineManagerNameWarningTooltip}    data-original-title    
+    
+             

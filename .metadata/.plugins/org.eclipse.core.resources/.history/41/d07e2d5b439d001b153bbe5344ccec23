@@ -1,0 +1,39 @@
+*** Variables ***
+#Locator Variables
+
+#Header
+${LoginHereLink}    //*[@href='https://staging-safety365.sevron.co.uk']
+${CreateAccountLabel}    //h1[contains(text(), 'Create your account')]
+
+#First Name
+${FirstNameLabel}    //*[contains(@class, 'col-xs-2') and text()= 'First Name']
+${FirstNamePlaceholder}    //*[@id="firstname"]
+
+#Last Name
+${LastNameLabel}    //*[contains(@class, 'col-xs-2') and text()= 'Last Name']
+${LastNamePlaceholder}    //*[@id="lastname"]    
+
+#Company Name
+${CompanyNameLabel}    //*[contains(@class, 'col-xs-2') and text()= 'Company']
+${CompanyPlaceholder}    //*[@id="company"]
+
+#Company Name
+${TelephoneLabel}    //*[contains(@class, 'col-xs-2') and text()= 'Telephone']
+${TelephonePlaceholder}    //*[@id="telephone"]
+
+#Work Email
+${WorkEmailLabel}    //*[contains(@class, 'col-xs-2') and text()= 'Work Email']
+${WorkEmailPlaceholder}    //*[@id="email"]
+
+#Password
+${CreatePasswordLabel}    //*[contains(@class, 'col-xs-2') and text()= 'Password']
+${CreatePasswordPlaceholder}    //*[@id="password"]
+
+#Terms and Conditions
+${TermsAndConditionsLink}    //*[@href='https://www.sevron.co.uk/terms-conditions/']
+
+#Create Account Button
+${CreateAccountButton}    //*[@id="SignupForm"]/div[2]/div/button
+
+#Captcha
+${CaptchaContainer}    //*[@id="rc-anchor-container"]
